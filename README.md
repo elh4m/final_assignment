@@ -1,5 +1,5 @@
-# final_assignment
-The assignment is done in a ROS architecture for controling a  robot moving in the Gazebo environment.The software relies on the move_base and gmapping packages for localizing the robot and plan its motion. The program acquires the user's request, and lets the robot execute one of the pre-defined behaviors accordingly, along with Simulataneous Localization and Mapping(SLAM),path planning and collision avoidance.specially,Gazebo and Rviz used for the simulation of the assignment,whereas Gazebo is the 3d simulator for ROS and rviz,abbreviation for ROS visualization,is a powerful 3D visualization tool for ROS.It allows the user to view the simulated robot model, log sensor information from the robot's sensors, and replay the logged sensor information.
+# final_assignment by Elham Mohammadi 5073904 .research track1
+The assignment is done in a ROS architecture for controling a  robot moving in the Gazebo environment.
 
 The program is able to acquire the requests of user input on the following states:
 
