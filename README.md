@@ -48,3 +48,8 @@ The server package my_srv contains the file final_exercise_server.cpp  containin
 6.To display the computational graph of the system,run the following command:
 
     rosrun rqt_graph rqt_graph
+    
+    
+    
+    ![rosgraph](https://user-images.githubusercontent.com/77781922/115144827-4b7f9100-a03e-11eb-8770-35e90c0dafe6.png)
+
