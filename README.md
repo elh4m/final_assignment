@@ -18,7 +18,7 @@ The simulation is done in following steps:
 
 1.For the first step, exam_final.py node requests my_srv for a random target position between the range of 1 to 6.Then,the main node publishes the target positions to /move_base/goal and check this status of goal by subscribing to the topic /move_base/status.When the robot reaches the target and the status of robot is displayed, the main node requests the user to input again.
 
-2.For the second step, the user chooses one out of six possible target positions and publishes it to /move_base/goal.
+2.For the second step, the user chooses 1 out of 6 possible target positions.
 
 3.For the third step,the wall_follower service is generated through initialization of a service client to allow the robot to follow the external walls.
 
@@ -29,7 +29,7 @@ In steps 3 and 4,The interface also allows the user to enter the same or differe
 my_srv(server):
 The server package my_srv contains the file final_exercise_server.cpp  containing the source code for generating random integer within a specified range and advertising it over the node /final_exercise. It provides a requests with two integers namely min and max, and returns one random integer target_index within this range in response.
 
-#Simulation of the assignment is done by follwing commands:
+#Simulation of the assignment:
 1.In the command terminal, launch Gazebo and rviz by executing the following command:
 
     roslaunch final_assignment simulation_gmapping.launch
