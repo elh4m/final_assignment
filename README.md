@@ -10,10 +10,9 @@ The program is able to acquire the requests of user input:
 
 3.Robot starts following  walls.
 
-4.Robot will stop in the last position. {If the robot is in state 1 or 2, the system waits until the robot reaches the position in order to switch to state 3 or 4}.
+4.Robot will stop in the last position.
 
 ## how the Mobile Robot is controlled:
-The final_assignment package contains the scripts,launch files and other dependencies used to simulate the 3D environment and move the robot in it.The simulation_gmapping.launch file launches the house.world file environment.The importatant node exam_final.py contains python codes which is responsible for the mobile robot simulation.
 
 The simulation is done in following steps:
 
