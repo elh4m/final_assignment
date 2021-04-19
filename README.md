@@ -47,6 +47,9 @@ The server package my_srv contains the file final_exercise_server.cpp  containin
     rosrun final_assignment exam_final.py
 6.To display the computational graph of the system,run the following command:
 
+![rosgraph](https://user-images.githubusercontent.com/77781922/115210319-ff8c2500-a0ed-11eb-9404-2098fc9e7d98.png)
+
+
     rosrun rqt_graph rqt_graph
     
     
