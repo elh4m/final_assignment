@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 import rospy
-from std_srvs.srv import *
+from std_srvs.srv import 
 import time
 #To suspend excution for a specific amount of time
 from time import sleep
