@@ -1,15 +1,14 @@
 #! /usr/bin/env python
-# importing ros stuffs
 import rospy
 from std_srvs.srv import *
 import time
-#To suspend excution for certain amount of time
+#To suspend excution for a specific amount of time
 from time import sleep
-#Common messages needed for velocities
+#velocity related messages
 from geometry_msgs.msg import Twist
-#Common messages needed for navigation
+#navigation messages
 from move_base_msgs.msg import MoveBaseActionGoal
-#To intract with action server and action clint
+#to connect action server and action client
 from actionlib_msgs.msg import GoalStatusArray
 #import for custom services
 from my_srv.srv import final_exercise
@@ -46,13 +45,13 @@ def main():
     
     rate = rospy.Rate(20)
     while not rospy.is_shutdown():
-#To take input from the user to perform 4 differnt task in the program
+#taking inputs from the user to perform the following tasks:
         print("""\nEnter integers from 1 to 4 to execute the following behaviors:
      (1) Move randomly in the environment, by choosing 1 out of 6 possible target positions.
      (2) Enter the next target position out of the possible six and reach it.
      (3) Start following the external walls.
      (4) To enter standby position.""")
-#Takes input from the user
+#user's input
         x = int(input("\nEnter a number from 1 to 4 corresponding to the chosen robot behavior: "))
 
 #When the user gives input as 1 the robot moves randomly by choosing 1 coordinate out of all possible given coordinated         
@@ -66,7 +65,7 @@ def main():
             MoveBase_msg = MoveBaseActionGoal()
 #Setting frame_id to the map            
             MoveBase_msg.goal.target_pose.header.frame_id = "map"
-#Set orientation W             
+#here we set the orientation W             
             MoveBase_msg.goal.target_pose.pose.orientation.w = 1
 #For using x as input coordinate at position x             
             MoveBase_msg.goal.target_pose.pose.position.x = random_targets[rand_index -1][0]
@@ -78,7 +77,7 @@ def main():
             print('\nRobot is moving towards the target position.')
             sleep(15)
             target_reached_status = 0
-#After reaching the traget
+#the step after reaching the target
             while(target_reached_status == 0):
                 sleep(1)
             print('\nRobot reached the target position.')
